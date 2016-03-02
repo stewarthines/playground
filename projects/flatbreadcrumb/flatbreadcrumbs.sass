@@ -1,0 +1,115 @@
+// Line 25 Tut Flat Style Breadcrumbs
+// = = = = = = = = = = = = = //
+// Stewart Hines | March 2016
+// = = = = Contents: = = = = //
+// 1. Global
+// 2. Header Banner
+// 3. Breadcrumb Buttons
+//  3.A Breadcrumb Shape
+//  3.B Chevrons
+//  3.C Hover & Active States
+//  3.D End Caps
+// = = = = = = = = = = = = = //
+// NOTE: Based off of the Line 25 Tutorial: http://localhost:8000/projects/flatbreadcrumb/index.html
+// = = = = 1. Variables = = = = //
+$skyBlue: #d5f2ff
+$cyan:#3598dc
+$pink:#fb5ba5
+$borderRadius:10px
+$muteBlue:#a4b4ca
+
+// = = = = 2. Global = = = = //
+html,
+body
+  background:$skyBlue
+  font-family: 'Roboto', sans-serif
+  max-width:90%
+  margin:0 auto
+
+// = = = = 3. Header Banner = = = = //
+header[role="banner"]
+  text-align:center
+  margin-bottom:120px
+  h1
+    color:darken($muteBlue, 25)
+
+  a
+    display:inline-block
+    padding:15px 20px
+    color:white
+    text-decoration:none
+    border-radius: $borderRadius
+    background:$muteBlue
+    transition: background 180ms ease-in-out
+    &:hover
+      background:darken($muteBlue, 25)
+      transition: background 180ms ease-in-out
+
+// = = = = 4. Breadcrumb Buttons = = = = //
+.breadcrumbs
+  display:block
+  margin:0 auto
+  text-align:center  
+  ul
+    display:inline-table
+    list-style:none
+    padding:0
+  li
+    display:inline
+
+  // === 4.A Breadcrumb Shape === //
+  li a
+    position:relative
+    float:left
+    display:block
+    height:50px
+    margin: 0 10px 0 0
+    padding:30px 40px 0 80px
+    color:white
+    font-size:20px
+    font-weight:500
+    text-align:center
+    text-decoration:none
+    text-shadow: 0 1px 3px 10px rgba(0,0,0,.19), 0 1px 3px 10px rgba(0,0,0,.24)
+    text-transform:uppercase
+    background:$cyan
+
+    // === 4.B Chevrons === //
+    &:after
+      content:""
+      position:absolute
+      z-index: 1000
+      right:-40px
+      top:0
+      border-top:40px solid transparent
+      border-bottom:40px solid transparent
+      border-left:40px solid $cyan
+    &:before
+      content:""
+      position:absolute
+      left:0
+      top:0
+      border-top:40px solid transparent
+      border-bottom:40px solid transparent
+      border-left:40px solid $skyBlue
+
+    // === 4.C Hover & Active States === //
+    &:hover,
+    &.active
+      background:$pink
+      &:after
+        border-left-color:$pink
+
+  // === 4.D Endcaps === //
+  li:first-child a
+    border-top-left-radius: $borderRadius
+    border-bottom-left-radius: $borderRadius
+    &:before
+      display:none
+
+  li:last-child a
+    padding-right:80px
+    border-top-right-radius: $borderRadius
+    border-bottom-right-radius: $borderRadius
+    &:after
+      display:none

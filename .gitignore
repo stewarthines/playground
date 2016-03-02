@@ -49,5 +49,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Prepross File
-*prepross.cfg
+*prepros.cfg
 prepros.cfg
