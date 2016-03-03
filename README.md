@@ -13,3 +13,5 @@ I want to do a few tutorials. Here they are...
 ## Other things
 
 I'm going to try and use the [DevTips Starter Pack](https://github.com/DevTips/DevTips-Starter-Kit) on this deal. I know I started with out it. But i'm going to try and convert this to Jekyll and use the starter pack. It should be fun.
+
+Also, i'm following along [Here.](http://www.codewithcoffee.com/28-css-effects-tutorials-designers-must-know/)
